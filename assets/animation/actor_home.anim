@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "actor_home",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.25,
+  "sample": 24,
+  "speed": 0.2,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "007c532e-4b3b-47f5-b25b-4d1036b0157e"
+            }
+          },
+          {
+            "frame": 0.041666666666666664,
+            "value": {
+              "__uuid__": "dd36e49e-4022-44c4-bc09-1fa72d45fba2"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "ef43eb57-35b4-4c42-964c-e6cfb4f4c5e3"
+            }
+          },
+          {
+            "frame": 0.125,
+            "value": {
+              "__uuid__": "66570190-f7b5-463d-9a0a-b055989a79bb"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "797c272f-c59f-438b-b452-d576b0c642fd"
+            }
+          },
+          {
+            "frame": 0.20833333333333334,
+            "value": {
+              "__uuid__": "ba22f51e-3387-4db5-b593-5f8eaf9c54e6"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

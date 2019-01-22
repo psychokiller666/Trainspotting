@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="10" height="17" tilewidth="80" tileheight="80" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" name="tiles" tilewidth="80" tileheight="80" tilecount="48" columns="6">
+  <image source="../tiles.png" width="480" height="656"/>
+ </tileset>
+ <tileset firstgid="49" name="tiles" tilewidth="80" tileheight="80" tilecount="48" columns="6">
+  <image source="../tiles.png" width="480" height="656"/>
+ </tileset>
+ <layer name="块层 1" width="10" height="17">
+  <data encoding="csv">
+20,4,0,0,0,0,0,0,3,20,
+20,4,11,12,0,0,0,0,3,20,
+20,4,17,18,0,0,0,0,3,20,
+20,4,0,0,0,0,0,0,3,20,
+20,4,0,0,0,0,0,0,3,20,
+20,4,0,0,0,0,11,12,3,20,
+20,4,0,0,0,0,17,18,3,20,
+20,4,0,0,0,0,0,0,3,20,
+20,4,0,0,0,0,0,0,3,20,
+20,4,0,0,23,24,0,0,3,20,
+20,4,0,0,29,30,0,0,3,20,
+20,4,0,0,0,0,0,0,3,20,
+20,4,0,0,0,0,0,0,3,20,
+20,4,23,24,0,0,0,0,3,20,
+20,4,29,30,0,0,0,0,3,20,
+20,4,0,0,0,0,23,24,3,20,
+20,4,0,0,0,0,29,30,3,20
+</data>
+ </layer>
+</map>
