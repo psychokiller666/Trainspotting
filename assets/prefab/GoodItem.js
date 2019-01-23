@@ -29,7 +29,6 @@ cc.Class({
             default: 0,
             notify () {
                 this.node.$MagicSprite.index = this.id
-                
             }
         }
     },
@@ -41,11 +40,6 @@ cc.Class({
     },
 
     start: function () {
-        // console.log(cc.director.getScene())
-        // this.Player.node.emit('good', () => {
-        //     // console.log('aa')
-        // })
-        
     },
 
     destroyGood: function () {

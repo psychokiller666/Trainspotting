@@ -26,13 +26,13 @@ cc.Class({
     },
 
     start: function () {
-        console.log(this.scoreLabel)
+        // console.log(this.scoreLabel)
         // 碰撞金币
         this.node.on('goodCollision', (other) => {
             other.node.$GoodItem.destroyGood().then(() => {
                 Config.SCORE = Config.SCORE + 1
                 this.scoreLabel.string = Config.SCORE
-                console.log(Config.SCORE)
+                // console.log(Config.SCORE)
 
             })
         })
