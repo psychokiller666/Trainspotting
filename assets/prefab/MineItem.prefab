@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "GoodItem",
+    "_name": "MagicSprite",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -25,16 +25,10 @@
       },
       {
         "__id__": 3
-      },
-      {
-        "__id__": 4
-      },
-      {
-        "__id__": 5
       }
     ],
     "_prefab": {
-      "__id__": 6
+      "__id__": 4
     },
     "_opacity": 255,
     "_color": {
@@ -91,9 +85,9 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "e46b7657-ab0e-459c-8816-92c8d13704ca"
+      "__uuid__": "8e5f3715-3b45-46c7-a92b-7dbc4be8e0a6"
     },
-    "_type": 1,
+    "_type": 0,
     "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
@@ -108,72 +102,25 @@
     "_atlas": null,
     "_spriteFrames": [
       {
-        "__uuid__": "e46b7657-ab0e-459c-8816-92c8d13704ca"
+        "__uuid__": "8e5f3715-3b45-46c7-a92b-7dbc4be8e0a6"
       }
     ],
     "_index": 0,
-    "spriteName": "未标题-1",
+    "spriteName": "mine",
     "_nameEnum": {
-      "gold": 0
+      "mine": 0
     },
     "_N$dataID": "",
     "_id": ""
   },
   {
-    "__type__": "42039ZL8/5HNqnfmqG26CTq",
+    "__type__": "dddddCs9M1Eb7nkpBHc7zOq",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "useController": false,
-    "controllerName": "",
-    "_N$id": 1,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CircleCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "tag": 0,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_radius": 15,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "alignMode": 1,
-    "_target": null,
-    "_alignFlags": 0,
-    "_left": 0,
-    "_right": 0,
-    "_top": 0,
-    "_bottom": 0,
-    "_verticalCenter": 0,
-    "_horizontalCenter": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_isAbsHorizontalCenter": true,
-    "_isAbsVerticalCenter": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0,
     "_id": ""
   },
   {
@@ -182,9 +129,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "8ee16ce8-89ad-42a9-b87c-ed18f10da001"
+      "__uuid__": "5b58e729-3cab-43b9-8dff-e699ca7495f3"
     },
-    "fileId": "f3a4kbaKVGTJ5aH5JUHyh+",
+    "fileId": "fdyqSh0hFAOri8IOjweyHU",
     "sync": false
   }
 ]

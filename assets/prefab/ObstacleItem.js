@@ -25,6 +25,7 @@ cc.Class({
 
     onLoad: function () {
         this.Map = cc.find('Canvas/_gamePlaying/_gameMap')
+        // this.node.runAction(cc.follow(this.Map))
     },
 
     shakeAction: function () {

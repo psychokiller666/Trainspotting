@@ -8,12 +8,8 @@ cc.Class({
     properties: {
         scoreLabel: {
             type: cc.Label,
-            default: null,
-            // get () {
-            //     return '得分' + this.scoreLabel.string
-            // },
+            default: 0,
             notify () {
-                // console.log()
                 this.scoreLabel.string = Config.SCORE
             }
         }
@@ -26,14 +22,11 @@ cc.Class({
     },
 
     start: function () {
-        // console.log(this.scoreLabel)
         // 碰撞金币
         this.node.on('goodCollision', (other) => {
             other.node.$GoodItem.destroyGood().then(() => {
                 Config.SCORE = Config.SCORE + 1
                 this.scoreLabel.string = Config.SCORE
-                // console.log(Config.SCORE)
-
             })
         })
     },
@@ -44,17 +37,13 @@ cc.Class({
     },
 
     init: function() {
-        // this._Hero.node.pauseAllActions()
         this._Hero.$Hero.init()
-        // console.log(this._Hero.$Hero)
-        // 游戏初始化
-        
-        // 生成地图
     },
 
 
     end: function () {
-
+        // 游戏结束
+        
     },
     
  

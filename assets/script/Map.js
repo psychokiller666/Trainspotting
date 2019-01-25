@@ -20,12 +20,6 @@ cc.Class({
         // 障碍物 对象池
         this.obstaclePool = new cc.NodePool('obstacle')
         this.obstacleCount = 20
-
-        // 金币 对象池
-        this.pillPool = new cc.NodePool()
-        // 水雷 对象池
-        this.minePool = new cc.NodePool()
-
     },
     start: function () {
         // this.createPool()
