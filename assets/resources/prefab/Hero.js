@@ -53,15 +53,25 @@ cc.Class({
         
     },
 
-    swimMove: function () {
+    // 无敌模式
+    invincibleMode: function () {
+
+    },
+
+    swimMove: function (dt) {
         let tempDistance = this.moveDistance
         this.node.$RigidBody.linearVelocity = cc.v2(this.node.scaleX == -1 ? tempDistance : -tempDistance, this.moveDistance)
+        // console.log(cc.v2(this.node.scaleX == -1 ? tempDistance : -tempDistance, this.moveDistance))
+        // this.node.$RigidBody.linearVelocity = cc.subSelf(cc.v2(0 , 1))
+        // console.log(this.node.getPosition().normalize())
+        // this.node.$RigidBody.linearVelocity = this.node.$RigidBody.linearVelocity.addSelf(cc.v2(0, dt))
+        // this.node.position = this.node.position.addSelf(cc.v2(0, dt * this.moveDistance))
     },
 
     // 向左浮动
     swimLeft: function () {
         return new Promise((resolve, reject) => {
-            this.node.scaleX = 1
+            this.node.scaleX = -1
             resolve()
         })
     },
@@ -69,7 +79,7 @@ cc.Class({
     // 向右浮动
     swimRight: function () {
         return new Promise((resolve, reject) => {
-            this.node.scaleX = -1
+            this.node.scaleX = 1
             resolve()
         })
     },
@@ -96,19 +106,15 @@ cc.Class({
     },
     
     onCollisionEnter: function (other, self) {
-        this.Playing.emit('goodCollision', other, self)
+        // console.log(other.node.name)
+        this.Playing.emit(other.node.name, other, self)
     },
 
     onBeginContact: function (contact, selfCollider, otherCollider) {
         // console.log(otherCollider.node.name)
         switch (otherCollider.node.name)  {
             case 'top': 
-                // console.log('ddd')
-                if (Config.GAME_STATUS = 'playing') {
-                    // 游戏结束
-                    // Config.GAME_STATUS = 'gameover'
-                    // console.log('game over')
-                }
+
             break;
             case 'left':
                 this.swimRight()
@@ -133,7 +139,7 @@ cc.Class({
 
     update: function (dt) {
         if (Config.GAME_STATUS == 'playing') {
-            this.swimMove()
+            this.swimMove(dt)
 
             if (this.node.y <= 400) {
                 this.Map.y = this.Map.y + (dt * 200 / 2.8)

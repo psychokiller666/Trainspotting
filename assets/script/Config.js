@@ -38,5 +38,26 @@ module.exports = {
                 height: 120
             }
         },
+    },
+    // 金币
+    // id：id
+    // quantity：数量
+    // position：位置
+    GOOD_ITEM: {
+        1: {
+            id: 1,
+            quantity: 2,
+            position: 'left'
+        },
+        2: {
+            id: 2,
+            quantity: 3,
+            position: 'right'
+        },
+        3: {
+            id: 2,
+            quantity: 3,
+            position: 'center'
+        }
     }
 }

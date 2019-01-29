@@ -2,17 +2,16 @@ import Thor from 'Thor'
 import Config from 'Config'
 import _ from 'lodash'
 
-
-const GOOD_ITEM = {
+const MINE_ITEM = {
     1: {
         id: 1,
-        quantity: 2,
-        position: 'left'
+        quantity: 1,
+        position: 'left',
     },
     2: {
-        id: 2,
-        quantity: 3,
-        position: 'right'
+        id: 1,
+        quantity: 1,
+        position: 'right',
     }
 }
 
@@ -21,14 +20,14 @@ cc.Class({
 
     properties: {
         goodItem: cc.Prefab,
+        mineItem: cc.Prefab,
         intervalDistance: 10
     },
 
     onLoad: function () {
         this.id = _.random(1, 5)
-        this.goodId = _.random(1,2)
-        this.goodPool = new cc.NodePool('good')
-        this.minePool = new cc.NodePool('mine')
+        this.goodId = _.random(1,3)
+        this.mineId = _.random(1,2)
 
         // 初始化障碍物
         this.init()
@@ -41,12 +40,10 @@ cc.Class({
     // 金币
     createGood: function () {
         let good = null
-        for (let i = 1; GOOD_ITEM[this.goodId].quantity >= i; i++) {
-            // this.goodPool.put(cc.instantiate(this.goodItem))
-            // good = this.goodPool.get()
+        for (let i = 1; Config.GOOD_ITEM[this.goodId].quantity >= i; i++) {
             good = cc.instantiate(this.goodItem)
             // 位置
-            switch (GOOD_ITEM[this.goodId].position) {
+            switch (Config.GOOD_ITEM[this.goodId].position) {
                 // 左边金币
                 case 'left': 
                     this.node.obstacle_left.addChild(good)
@@ -65,8 +62,12 @@ cc.Class({
                 break;
                 // 中间金币
                 case 'center':
-                    this.node.goodList.addChild(good)
-
+                    this.node.obstacle_left.addChild(good)
+                    good.$Widget.target = this.node
+                    good.$Widget.isAlignHorizontalCenter = true
+                    good.$Widget.isAlignTop = true
+                    good.$Widget.horizontalCenter = 0
+                    good.$Widget.top = i * (good.height + 20)
                 break;
             }
         }
@@ -74,7 +75,27 @@ cc.Class({
 
     // 水雷
     createMine: function () {
+        let mine = null
+        for (let i = 1; MINE_ITEM[this.mineId].quantity >= i; i++) {
+            mine = cc.instantiate(this.mineItem)
+            switch (MINE_ITEM[this.mineId].position) {
+                case 'left':
+                    this.node.obstacle_left.addChild(mine)
+                    mine.$Widget.right = - mine.width
+                    mine.$Widget.top = i * mine.height
+                    mine.$Widget.isAlignTop = true
+                    mine.$Widget.isAlignRight = true
+                break;
 
+                case 'right':
+                    this.node.obstacle_right.addChild(mine)
+                    mine.$Widget.left = - mine.width
+                    mine.$Widget.top = i * mine.height
+                    mine.$Widget.isAlignTop = true
+                    mine.$Widget.isAlignLeft = true
+                break;
+            }
+        }
     },
 
     init: function () {
@@ -85,6 +106,5 @@ cc.Class({
 
         this.node.obstacle_left.$ObstacleItem.id = this.id
         this.node.obstacle_right.$ObstacleItem.id = this.id
-        // this.createGood()
     }
 });

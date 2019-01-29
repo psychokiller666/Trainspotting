@@ -1,8 +1,17 @@
 {
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
   "appKey": "",
   "appSecret": "",
   "encryptJs": true,
   "excludeScenes": [],
+  "fb-instant-games": {},
   "includeAnySDK": false,
   "includeSDKBox": false,
   "inlineSpriteFrames": true,
@@ -20,9 +29,13 @@
   },
   "packageName": "org.cocos2d.killers",
   "privateKey": "",
-  "renderMode": "0",
-  "startScene": "77b38494-0ecb-432b-855c-405cf851cb8f",
-  "title": "killers",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "startScene": "3430f9a4-eafd-44ee-beed-f5159a294aa3",
+  "title": "Trainspotting",
   "webOrientation": "auto",
   "wechatgame": {
     "appid": "wx6ac3f5090a6b99c5",
